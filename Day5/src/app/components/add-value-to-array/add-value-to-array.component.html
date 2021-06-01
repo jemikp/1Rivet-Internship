@@ -1,0 +1,9 @@
+
+<input type="text" #newElement>
+<button (click)="addNewElement(newElement.value)">Add Fruit</button>
+
+<table>
+    <tr *ngFor="let fruit of fruits">
+        <td>{{ fruit }}</td>
+    </tr>
+</table>
