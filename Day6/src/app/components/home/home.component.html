@@ -1,0 +1,16 @@
+<h3>Employee Data: (Parent to Child)</h3>
+<app-home-child1 
+    *ngFor="let emp of employees" [emp]="emp">  
+</app-home-child1>
+
+<br><br><br>
+
+<app-home-child2 (studentsData)=displayStudent($event)> 
+</app-home-child2>
+
+<h3>Data from Child</h3>
+
+<p *ngFor="let student of dataFromParent">
+    <li> name : {{ student.name }} </li>
+    <li> roll no : {{ student.roll_no }} </li>
+</p>
