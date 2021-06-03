@@ -1,0 +1,5 @@
+<p *ngFor="let fruit of fruits">
+    {{ fruit }}
+    <button (click)="editFruit(fruit)">Edit</button>
+    <button (click)="deleteFruit(fruit)">Delete</button>
+</p>
