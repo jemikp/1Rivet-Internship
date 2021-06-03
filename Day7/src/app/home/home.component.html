@@ -1,0 +1,9 @@
+
+<input #fruit_name type="text" placeholder="enter fruit name" value={{valueToDiaplay}}>
+<button (click)="addFruit(fruit_name.value)">Add</button>
+<button (click)="updateValue(fruit_name.value)">Update</button>
+
+<app-child1 [fruits]="fruits" (name)="childData($event)"></app-child1>
+
+
+
