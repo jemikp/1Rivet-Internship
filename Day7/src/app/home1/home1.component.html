@@ -1,0 +1,8 @@
+<div>
+    <input type="text" [(ngModel)]="inputText" #fruit_name placeholder="Enter Fruit Name" >
+    <button (click)="addFruit(fruit_name.value)" [disabled]="disableAdd">Add</button>
+    <button (click)="updateFruit(fruit_name.value)" [disabled]="disableUpdate">Update</button>
+</div>
+
+
+<app-child [fruits]="fruits" (sendFruitEvent)="updateFruitValue($event)"></app-child>
